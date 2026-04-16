@@ -10,6 +10,10 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 <link rel="icon" href="images/favicon.png" type="image/png">
 <link rel="shortcut icon" href="images/favicon.png">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preconnect" href="https://images.pexels.com">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preconnect" href="https://images.pexels.com">
 <style>
 body {
     font-family: 'Segoe UI', sans-serif;
@@ -1037,10 +1041,10 @@ body {
 <div class="carousel-inner">
 
 <div class="carousel-item active">
-<img src="images/200.png" class="hero-img">
+<img src="images/200.png" class="hero-img" loading="eager">
 <div class="carousel-caption text-center text-white">
-<h1 class="fw-bold">SSVIMS College & Hospital</h1>
-<p>Excellence in Medical Education</p>
+<h1 class="fw-bold">SSVIMS College of Physiotherapy</h1>
+<p>Shaping Skilled Physiotherapists | Restoring Healthy Lives.</p>
 </div>
 </div>
 
@@ -1397,9 +1401,28 @@ class="img-fluid acad-img" alt="Physiotherapy Training">
 </div>
 
 <div class="col-md-6">
-<iframe class="w-100 rounded" height="300" src="https://www.google.com/maps?q=Nellore&output=embed"></iframe>
-</div>
 
+    <!-- Optimized Google Map -->
+    <div class="shadow rounded overflow-hidden">
+        <iframe 
+            class="w-100"
+            height="300"
+            style="border:0;"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Sri+Siddhi+Vigneshwara+Institute+of+Medical+Sciences+Nellore&output=embed">
+        </iframe>
+    </div>
+
+    <!-- Open in Maps Button -->
+    <a href="https://maps.app.goo.gl/98tTuafZZxBgGPqr6" 
+       target="_blank" 
+       class="btn btn-success mt-3 w-100">
+       📍 Open in Google Maps
+    </a>
+
+</div>
 </div>
 </div>
 </section>
@@ -1472,7 +1495,7 @@ class="img-fluid acad-img" alt="Physiotherapy Training">
             <div class="col-lg-4 col-md-6">
                 <div class="footer-brand">
                     <img src="images/ssvims_vigneswara.jpeg" alt="SSVIMS Logo">
-                    <h4>SSVIMS College</h4>
+                    <h4>SSVIMS College of Physiotherapy</h4>
                     <p>
                         Sri Siddhi Vigneshwara Institute of Medical Sciences is dedicated to
                         excellence in physiotherapy education, clinical care, and research.
@@ -1623,6 +1646,10 @@ document.querySelectorAll('.faq-card').forEach(card => {
         });
 
     });
+});
+document.querySelectorAll("img").forEach(img => {
+    img.setAttribute("loading", "lazy");   // Lazy load images
+    img.setAttribute("decoding", "async"); // Faster rendering
 });
 </script>
 
